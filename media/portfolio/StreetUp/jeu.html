@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="jeu.css">
+    <link rel="icon" href="img/icon.png">
+    <title>StreetUp</title>
+</head>
+<body>
+    <!-- Barre de navigation -->
+    <div class="navigbar">
+    	<a id="logo" href="index.html">
+	        <img src="img/logo.png" height=70px>
+	    </a>
+        <a href="regles2.html">
+            <img id="buttonRegles" src="img/regles2.png"/>
+        </a>
+        <a href="aPropos2.html">
+            <img id="buttonAPropos" src="img/aPropos.png"/>
+        </a>
+	    <a href="https://www.instagram.com/street_up_app/" id="ig">
+	        <img src="img/ig.png">
+	    </a>
+	    <a href="https://www.facebook.com/StreetUp-104897931429715" id="fb">
+	        <img src="img/fb.png">
+	    </a>
+	    <a href="https://twitter.com/Street__up" id="twitter">
+	        <img src="img/twitter.png">
+	    </a>
+    </div>
+
+    <!-- Barre des ressources -->
+    <div class="statbar bg-light rounded">
+    	<div class="res1 spaced">
+	        <img src="img/techno.png" class="respicture">
+	    </div>
+	    <div id="techno" class="res2 spaced">
+	        0
+	    </div>
+	    <div class="res3 spaced">
+	        <img src="img/component.png" class="respicture">
+	    </div>
+	    <div id="component" class="res4 spaced">
+	        0
+	    </div>
+	    <div class="res5 spaced">
+	        <img src="img/money.png" class="respicture">
+	    </div>
+	    <div id="money" class="res6 spaced">
+	        200
+	    </div>
+	    <div class="res7 spaced">
+	        <img src="img/polution.png" class="respicture">
+	    </div>
+	    <div id="polution" class="res8 spaced">
+	        100%
+	    </div>
+    </div>
+
+	<!-- Barre des workers -->
+    <div id="workerDiv"class="countbar bg-light rounded">
+        <div id="round">
+            <img src="img/tours.png">
+        </div>
+        <div id="roundEqual">
+            =
+        </div>
+        <div id="roundCount">
+            0
+        </div>
+    	<div id="worker">
+	        <img src="img/worker.png">
+	    </div>
+	    <div id="workerCross">
+	        X
+	    </div>
+	    <div id="workerCount">
+	        3
+	    </div>
+    </div>
+
+    <div id="mainButtons">
+    	<div id="buttonPart" class="rounded">
+	    	<div id="openSpace" class="rounded">
+	    		<label>Open-Space</label>
+	    		<input id="dataInput" name="openSpaceInput" class="form-control" rows="1" value="0" disabled></input>
+	    		<button id="openSpacePlusButton" type="button" class="btn btn-default">+</button>
+	    		<button id="openSpaceMinusButton" type="button" class="btn btn-default">-</button>
+	    	</div>
+	    	<div id="recruter" class="rounded">
+	    		<label>Recruter</label>
+	    		<input id="dataInput" class="form-control" rows="1" value="0" disabled></input>
+	    		<button id="recruterPlusButton" type="button" class="btn btn-default">+</button>
+	    		<button id="recruterMinusButton" type="button" class="btn btn-default">-</button>
+	    	</div>
+	    	<div id="usine" class="rounded">
+	    		<label>Usine</label>
+	    		<input id="dataInput" class="form-control" rows="1" value="0" disabled></input>
+	    		<button id="usinePlusButton" type="button" class="btn btn-default">+</button>
+	    		<button id="usineMinusButton" type="button" class="btn btn-default">-</button>
+	    	</div>
+	    	<div id="BE" class="rounded">
+	    		<label>Bureau d'étude</label>
+	    		<input id="dataInput" class="form-control" rows="1" value="0" disabled></input>
+	    		<button id="BEPlusButton" type="button" class="btn btn-default">+</button>
+	    		<button id="BEMinusButton" type="button" class="btn btn-default">-</button>
+	    	</div>
+	    </div>
+	    <div id="lastButtonPart" class="rounded-bottom">
+	    	<div id="enhance" class="rounded">
+	    		<label>Pollution</label>
+	    		<input id="dataInput" class="form-control" rows="1" value="0" disabled></input>
+	    		<button id="enhancePlusButton" type="button" class="btn btn-default">+</button>
+	    		<button id="enhanceMinusButton" type="button" class="btn btn-default">-</button>
+	    	</div>
+	    </div>
+
+	    <button id="passButton" class="buttonPass"></button>
+    </div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+	  <div class="modal-dialog modal-dialog-centered" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="modalLabel">Attention !</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <p id="texteModal"></p>
+	      </div>
+	      <div class="modal-footer" id="modalFooter">
+	        <button type="button" class="btn btn-success" data-dismiss="modal">Fermer</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+    
+    <!-- Bootstrap core JavaScript
+        ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <script>
+        	$(function() {
+
+        		debut();
+
+				$('#openSpaceMinusButton').click(decrease);
+				$('#openSpacePlusButton').click(increase);
+
+				$('#recruterMinusButton').click(decrease);
+				$('#recruterPlusButton').click(increase);
+
+				$('#usineMinusButton').click(decrease);
+				$('#usinePlusButton').click(increase);
+
+				$('#BEMinusButton').click(decrease);
+				$('#BEPlusButton').click(increase);
+
+				$('#enhanceMinusButton').click(decrease);
+				$('#enhancePlusButton').click(increase);
+
+				$('#passButton').click(nextTurn);
+			});
+
+			function decrease() {
+				var value = $(this).parent().find('#dataInput').val();
+				var beforevalue = parseInt(document.getElementById("workerCount").innerHTML);
+				if(value > 0) {
+					value--;
+					$(this).parent().find('#dataInput').val(value);
+					document.getElementById("workerCount").innerHTML = ++beforevalue;
+				}
+			}
+
+			function increase() {
+				var value = $(this).parent().find('#dataInput').val();
+				var beforevalue = parseInt(document.getElementById("workerCount").innerHTML);
+				if($(this).parent().attr('id') == "recruter"){
+					if(value == 0){
+						value++;
+						$(this).parent().find('#dataInput').val(value);
+						document.getElementById("workerCount").innerHTML = --beforevalue;
+					}
+				}else if(beforevalue > 0) {
+					value++;
+					$(this).parent().find('#dataInput').val(value);
+					document.getElementById("workerCount").innerHTML = --beforevalue;
+				}
+			}
+
+			function nextTurn(){
+				//Partie des save
+				var saveTechno = parseInt(document.getElementById("techno").innerHTML);
+				var saveComponent = parseInt(document.getElementById("component").innerHTML);
+				var saveGold = parseInt(document.getElementById("money").innerHTML);
+				var savePollutionStat = parseInt(document.getElementById("polution").innerHTML);
+				var saveTurn = parseInt(document.getElementById("roundCount").innerHTML);
+				var saveWorkers = parseInt(document.getElementById("workerCount").innerHTML);
+				var saveOpenSpace = parseInt($(this).parent().find('#openSpace').find('#dataInput').val());
+				var saveRecruter = parseInt($(this).parent().find('#recruter').find('#dataInput').val());
+				var saveUsine = parseInt($(this).parent().find('#usine').find('#dataInput').val());
+				var saveBE = parseInt($(this).parent().find('#BE').find('#dataInput').val());
+				var savePollution = parseInt($(this).parent().find('#lastButtonPart').find('#enhance').find('#dataInput').val());
+				saveWorkers = saveWorkers+saveOpenSpace+saveRecruter+saveUsine+saveBE+savePollution;
+
+				//Partie fonctionnelle
+				var openSpace = parseInt($(this).parent().find('#openSpace').find('#dataInput').val());
+				var worker = parseInt(document.getElementById("workerCount").innerHTML);
+				if(openSpace != 0){
+					var gold = parseInt(document.getElementById("money").innerHTML);
+					document.getElementById("money").innerHTML = gold+openSpace*90;
+					worker = worker + openSpace;
+					document.getElementById("workerCount").innerHTML = worker;
+					$(this).parent().find('#openSpace').find('#dataInput').val(0);
+				}
+				var recruter = parseInt($(this).parent().find('#recruter').find('#dataInput').val());
+				worker = parseInt(document.getElementById("workerCount").innerHTML);
+				if(recruter != 0){
+					var gold = parseInt(document.getElementById("money").innerHTML);
+					var polution = parseInt(document.getElementById("polution").innerHTML);
+					document.getElementById("polution").innerHTML = (polution+5)+"%";
+					worker = worker + 2;
+					document.getElementById("workerCount").innerHTML = worker;
+					$(this).parent().find('#recruter').find('#dataInput').val(0);
+				}
+				var Usine = parseInt($(this).parent().find('#usine').find('#dataInput').val());
+				worker = parseInt(document.getElementById("workerCount").innerHTML);
+				if(Usine != 0){
+					var gold = parseInt(document.getElementById("money").innerHTML);
+					var polution = parseInt(document.getElementById("polution").innerHTML);
+					var composant = parseInt(document.getElementById("component").innerHTML);
+					document.getElementById("component").innerHTML = composant+(Usine*5);
+					document.getElementById("polution").innerHTML = (polution+(Usine*10))+"%";
+					document.getElementById("money").innerHTML = gold-(Usine*6);
+					worker = worker + Usine;
+					document.getElementById("workerCount").innerHTML = worker;
+					$(this).parent().find('#usine').find('#dataInput').val(0);
+				}
+				var BE = parseInt($(this).parent().find('#BE').find('#dataInput').val());
+				if(BE != 0){
+					var gold = parseInt(document.getElementById("money").innerHTML);
+					var techno = parseInt(document.getElementById("techno").innerHTML);
+					var composant = parseInt(document.getElementById("component").innerHTML);
+					document.getElementById("component").innerHTML = composant-(BE*3);
+					document.getElementById("techno").innerHTML = techno+(BE*1);
+					document.getElementById("money").innerHTML = gold-(BE*5);
+					worker = worker + BE;
+					document.getElementById("workerCount").innerHTML = worker;
+					$(this).parent().find('#BE').find('#dataInput').val(0);
+				}
+				var polutionCount = parseInt($(this).parent().find('#lastButtonPart').find('#enhance').find('#dataInput').val());
+				if(polutionCount != 0){
+					var polution = parseInt(document.getElementById("polution").innerHTML);
+					var techno = parseInt(document.getElementById("techno").innerHTML);
+					document.getElementById("polution").innerHTML = (polution-(polutionCount*15))+"%";
+					document.getElementById("techno").innerHTML = techno-polutionCount;
+					worker = worker + polutionCount;
+					document.getElementById("workerCount").innerHTML = worker;
+					$(this).parent().find('#lastButtonPart').find('#enhance').find('#dataInput').val(0);
+				}
+				var gold = parseInt(document.getElementById("money").innerHTML);
+				document.getElementById("money").innerHTML = gold-(worker*40);
+
+				var tour = parseInt(document.getElementById("roundCount").innerHTML);
+				document.getElementById("roundCount").innerHTML = tour + 1;
+
+				if(parseInt(document.getElementById("techno").innerHTML) < 0){
+					document.getElementById("texteModal").innerHTML = "Vous ne pouvez pas passer au tour suivant car vous dépensez trop de point de Technologie !";
+					$('#modal').modal();
+					reset(saveTechno,saveComponent,saveGold,savePollutionStat,saveTurn,saveWorkers,saveOpenSpace,saveRecruter,saveUsine,saveBE,savePollution);
+					return;
+				}
+				if(parseInt(document.getElementById("component").innerHTML) < 0){
+					document.getElementById("texteModal").innerHTML = "Vous ne pouvez pas passer au tour suivant car vous dépensez trop de composants !";
+					$('#modal').modal();
+					reset(saveTechno,saveComponent,saveGold,savePollutionStat,saveTurn,saveWorkers,saveOpenSpace,saveRecruter,saveUsine,saveBE,savePollution);
+					return;
+				}
+				if(parseInt(document.getElementById("money").innerHTML) < 0){
+					document.getElementById("texteModal").innerHTML = "Vous ne pouvez pas passer au tour suivant car vous dépensez trop de monnaie !";
+					$('#modal').modal();
+					reset(saveTechno,saveComponent,saveGold,savePollutionStat,saveTurn,saveWorkers,saveOpenSpace,saveRecruter,saveUsine,saveBE,savePollution);
+					return;
+				}
+				if(parseInt(document.getElementById("polution").innerHTML) < 0){
+					document.getElementById("polution").innerHTML = "0%";
+				}
+
+				var polution = parseInt(document.getElementById("polution").innerHTML);
+
+				if(polution == 0){
+					gagner();
+				}else if(tour+1 >= 20 && polution > 0){
+					perdu();
+				}
+
+				if(parseInt(document.getElementById("roundCount").innerHTML) =10){
+					milieu();
+				}
+			}
+
+			function reset(saveTechno,saveComponent,saveGold,savePollutionStat,saveTurn,saveWorkers,saveOpenSpace,saveRecruter,saveUsine,saveBE,savePollution) {
+				document.getElementById("techno").innerHTML = saveTechno;
+				document.getElementById("component").innerHTML = saveComponent;
+				document.getElementById("money").innerHTML = saveGold;
+				document.getElementById("polution").innerHTML = savePollutionStat;
+				document.getElementById("roundCount").innerHTML = saveTurn;
+				document.getElementById("workerCount").innerHTML = saveWorkers;
+			}
+
+			function debut() {
+				document.getElementById("texteModal").innerHTML = "Bonjour joueur, que dis-je ... monsieur le maire ! \nEt oui, vous êtes élu nouveaux maire de cette ville, c’est donc à vous de la faire vivre. \n Malheureusement l’ancien maire ne faisais pas attention à grand choses et voilà où ça a mené, une ville pollué ! \nTous les habitants comptent sur vous pour la rendre aussi propre qu’autre fois. \nBonne chance monsieur le maire, et surtout courage !";
+				$('#modal').modal();
+			}
+
+			function milieu() {
+				document.getElementById("texteModal").innerHTML = "Vous êtes à la moitié de votre mandat, j'espère que tout ce passe comme vous le souhaitez !";
+				$('#modal').modal();
+			}
+
+			function perdu() {
+				document.getElementById("texteModal").innerHTML = "Dommage, la ville n’est pas assez saine. \nVous avez vendu du rêve aux habitant mais le résultat ne colle pas. \nIls optent donc pour élire un autre maire.";
+				document.getElementById("modalFooter").innerHTML = "<button type='button' class='btn btn-danger' data-dismiss='modal' onclick="+'"'+"location.href = 'index.html';"+'"'+">Retourner à l'accueil</button>";
+				$('#modal').modal();
+			}
+
+			function gagner() {
+				document.getElementById("texteModal").innerHTML = "Super, vous avez réussi à assainir la ville ! \nGrâce à vous, la ville attire plus de monde et le secteur du tourisme se développe. \nLes habitants ont même voté pour vous pour le nouveau mandat, serez-vous encore à la hauteur ?";
+				document.getElementById("modalFooter").innerHTML = "<button type='button' class='btn btn-success' data-dismiss='modal'>Retourner à l'accueil</button>";
+				$('#modal').modal();
+			}
+    	</script>
+    </body>
+    </html>

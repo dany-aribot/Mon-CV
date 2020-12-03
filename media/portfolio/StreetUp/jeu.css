@@ -1,0 +1,496 @@
+.navigbar{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 70px;
+	width: 100vw;
+	background-color: #E0E0E0;
+	margin: 0 auto;
+}
+
+.standardpadding{
+	padding: 10px 10px 10px 10px
+}
+
+.bottomelements{
+	position: relative;
+	bottom: 0%;
+	left: 0%;
+	right: 0%;
+}
+
+.paddingbottomandtop{
+	padding: 20px 0 20px;
+}
+
+.statbar{
+	position: relative;
+	top: 10px;
+	width: calc(100% - 100px);
+	height: calc((100vw - 200px)/16);
+	min-height: 40px;
+	margin: 0 auto;
+}
+
+.countbar{
+	position: relative;
+	top: 20px;
+	width: 30vw;
+	height: calc(15vw / 3);
+	margin: 0 auto;
+}
+
+.res1{
+	position: absolute;
+	top: 2%;
+	height: 80%;
+	width: 5%;
+	min-height: 38px;
+	min-width: 38px;
+}
+
+.res1 img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.res2{
+	position: absolute;
+	top: 15%;
+	left: 7%;
+	font-size: calc((100vw - 200px)/(16*3));
+}
+
+.res3{
+	position: absolute;
+	top: 2%;
+	left: 25%;
+	height: 80%;
+	width: 5%;
+	min-height: 38px;
+	min-width: 38px;
+}
+
+.res3 img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.res4{
+	position: absolute;
+	top: 15%;
+	left: 32%;
+	font-size: calc((100vw - 200px)/(16*3));
+}
+
+.res5{
+	position: absolute;
+	top: 2%;
+	left: 50%;
+	height: 80%;
+	width: 5%;
+	min-height: 38px;
+	min-width: 38px;
+}
+
+.res5 img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.res6{
+	position: absolute;
+	top: 15%;
+	left: 57%;
+	font-size: calc((100vw - 200px)/(16*3));
+}
+
+.res7{
+	position: absolute;
+	top: 2%;
+	left: 75%;
+	height: 80%;
+	width: 5%;
+	min-height: 38px;
+	min-width: 38px;
+}
+
+.res7 img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+.res8{
+	position: absolute;
+	top: 15%;
+	left: 82%;
+	font-size: calc((100vw - 200px)/(16*3));
+}
+
+.respicture{
+	height: calc(3vh + 3px);
+	width: calc(3vh + 3px);
+}
+
+.spaced{
+	margin: 10px;
+}
+
+.buttonPass{
+	width: 100%;
+}
+
+.link1{
+	position: absolute;
+	left: 250px;
+	top: 15%;
+	font-size: 25px;
+}
+
+.link2{
+	position: absolute;
+	left: 350px;
+	top: 15%;
+	font-size: 25px;
+}
+
+.link3{
+	position: absolute;
+	left: 450px;
+	top: 15%;
+	font-size: 25px;
+}
+
+body{
+	background-color: #505050;
+	margin: 0 auto;
+}
+
+#passButton{
+	position: absolute;
+	bottom: 5vh;
+	left: 40vw;
+	width: 20vw;
+	height: 8.182vw;
+	background-image: url("img/next.png");
+	background-size: cover;
+	background-color: Transparent;
+	border: none;
+}
+
+#ig{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+}
+
+#ig img{
+	height: 50px;
+	width: 50px;
+}
+
+#fb{
+	position: absolute;
+	top: 10px;
+	right: 70px;
+}
+
+#fb img{
+	height: 50px;
+	width: 50px;
+}
+
+#twitter{
+	position: absolute;
+	top: 10px;
+	right: 130px;
+}
+
+#twitter img{
+	height: 50px;
+	width: 50px;
+}
+
+#main{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+}
+
+#round img{
+	position: absolute;
+	height: 100%;
+	left: 3%;
+	z-index: 20;
+}
+
+#roundEqual{
+	position: absolute;
+	font-size: 3vw;
+	height: 100%;
+	left: 25%;
+	z-index: 20;
+}
+
+#roundCount{
+	position: absolute;
+	font-size: 3vw;
+	height: 15vh;
+	left: 35%;
+	z-index: 20;
+}
+
+#worker img{
+	position: absolute;
+	height: 100%;
+	left: 55%;
+	z-index: 20;
+}
+
+#workerCross{
+	position: absolute;
+	font-size: 3vw;
+	height: 100%;
+	left: 70%;
+	z-index: 20;
+}
+
+#workerCount{
+	position: absolute;
+	font-size: 3vw;
+	height: 15vh;
+	left: 80%;
+	z-index: 20;
+}
+
+#logo{
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	z-index: 40;
+}
+
+#logo img{
+	height: 60px;
+}
+
+#buttonPart{
+	position: relative;
+	top: 30px;
+	left: 50px;
+	width: calc(100vw - 100px);
+	height: 20vh;
+	background-color: rgb(240,240,240);
+}
+
+#openSpace{
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: calc((100% - 15px)/2);
+	height: calc((100% - 15px)/2);
+	background-color: rgb(200,200,200);
+}
+
+#openSpace label{
+	position: absolute;
+	top: 25%;
+	font-size: 2vh;
+	left: 5%;
+}
+
+#openSpace input{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 50%;
+}
+
+#openSpace #openSpacePlusButton{
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	font-size: 2vh;
+}
+
+#openSpace #openSpaceMinusButton{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+	font-size: 2vh;
+}
+
+#recruter{
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	width: calc((100% - 15px)/2);
+	height: calc((100% - 15px)/2);
+	background-color: rgb(200,200,200);
+}
+
+#recruter label{
+	position: absolute;
+	top: 25%;
+	font-size: 2vh;
+	left: 5%;
+}
+
+#recruter input{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 50%;
+}
+
+#recruter #recruterPlusButton{
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	font-size: 2vh;
+}
+
+#recruter #recruterMinusButton{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+	font-size: 2vh;
+}
+
+#usine{
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	width: calc((100% - 15px)/2);
+	height: calc((100% - 15px)/2);
+	background-color: rgb(200,200,200);
+}
+
+#usine label{
+	position: absolute;
+	top: 25%;
+	font-size: 2vh;
+	left: 7%;
+}
+
+#usine input{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 50%;
+}
+
+#usine #usinePlusButton{
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	font-size: 2vh;
+}
+
+#usine #usineMinusButton{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+	font-size: 2vh;
+}
+
+#BE{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: calc((100% - 15px)/2);
+	height: calc((100% - 15px)/2);
+	background-color: rgb(200,200,200);
+}
+
+#BE label{
+	position: absolute;
+	top: 25%;
+	font-size: 2vh;
+	left: 3%;
+}
+
+#BE input{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 50%;
+}
+
+#BE #BEPlusButton{
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	font-size: 2vh;
+}
+
+#BE #BEMinusButton{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+	font-size: 2vh;
+}
+
+#lastButtonPart{
+	position: relative;
+	top: 30px;
+	left: calc((100vw - (100vw - 100px)/2)/2);
+	width: calc((100vw - 100px)/2);
+	height: 10vh;
+	background-color: rgb(240,240,240);
+}
+
+#enhance{
+	position: absolute;
+	bottom: 5px;
+	right: 5px;
+	width: calc(100% - 10px);
+	height: calc(100% - 5px);
+	background-color: rgb(200,200,200);
+}
+
+#enhance label{
+	position: absolute;
+	top: 25%;
+	font-size: 2vh;
+	left: 5%;
+}
+
+#enhance input{
+	position: absolute;
+	top: 25%;
+	left: 20%;
+	width: 50%;
+}
+
+#enhance #enhancePlusButton{
+	position: absolute;
+	top: 20%;
+	left: 75%;
+	font-size: 2vh;
+}
+
+#enhance #enhanceMinusButton{
+	position: absolute;
+	top: 20%;
+	left: 85%;
+	font-size: 2vh;
+}
+
+#buttonRegles{
+	position: absolute;
+	left: 30%;
+	top: 5%;
+	height: 90%;
+}
+
+#buttonAPropos{
+	position: absolute;
+	left: 60%;
+	top: 5%;
+	height: 90%;
+}

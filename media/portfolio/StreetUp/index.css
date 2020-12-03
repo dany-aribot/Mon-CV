@@ -1,0 +1,26 @@
+#buttonPlay{
+position: absolute;
+left: 43vw;
+top: 75vh;
+width: 10vw;
+}
+
+#buttonRegles{
+position: absolute;
+left: 43.5vw;
+top: 66vh;
+width: 9vw;
+}
+
+body {
+background-image: url("img/Page_dacceuil2.png");
+background-size: 100vw 100vh;
+background-repeat: no-repeat;
+}
+
+#buttonAPropos{
+	position: absolute;
+	left: 55vw;
+	top: 78vh;
+	width: 9vw;
+}
